@@ -1,0 +1,105 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#expertisonsid {
+  width: 70vw;
+}
+
+.content{
+	width: 40%;
+	min-width:400px;
+	height:420px;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+label.btn{
+	display: none;
+	width: 18px;
+	height: 18px;
+	border-radius: 18px;
+	background-color: #fff;
+	cursor: pointer;
+	position: relative;
+	top: 195px;
+	left: calc(50% - 27px);
+}
+input{
+	display: none;
+}
+.bannerWrap{
+	width: 700%;
+	height: 420px;
+	animation: startMove 20s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.banner{
+	width: 14.28%;
+	height: 420px;
+	float: left;
+	text-align: center;
+	font-size: 40px;
+	color: #fff;
+	font-weight: 700;
+}
+.banner_1{
+	background-color: #2C2E63;
+}
+.banner_2{
+	background-color: #2C2E63;
+}
+.banner_3{
+	background-color: #2C2E63;
+}
+@keyframes startMove{
+	0%{
+		margin-left: 0;
+	}
+	100%{
+		margin-left: -600%;
+	}
+}
+#control_1:checked ~ .bannerWrap{
+	animation-name:move1;	
+	animation-duration: 20s;
+}
+#control_2:checked ~ .bannerWrap{
+	animation-name:move2;
+	animation-duration: 10s;
+}
+#control_3:checked ~ .bannerWrap{
+	animation-name:move3;	
+	animation-duration: 10s;
+}
+@keyframes move1{
+	0%{
+		margin-left: 0;
+	}
+	100%{
+		margin-left: -600%;
+	}
+}
+@keyframes move2{
+	0%{
+		margin-left: -100%;
+	}
+	100%{
+		margin-left: -400%;
+	}
+}
+@keyframes move3{
+	0%{
+		margin-left: -200%;
+	}
+	100%{
+		margin-left: -500%;
+	}
+}
